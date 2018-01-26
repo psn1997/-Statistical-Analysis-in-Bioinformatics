@@ -31,3 +31,8 @@ dotPlot(cox1, cox2, main = "Human vs Mouse Cox1 Dotplot")
 dotPlot(cox1, cox2, wsize = 3, wstep = 3, nmatch = 3, main = "Human vs Mouse Cox1 Dotplot\nwsize = 3, wstep = 3, nmatch = 3")
 #Dotplot of only the first 100 residues of the sequence
 dotPlot(cox1[1:100], cox2[1:100], wsize = 3, wstep = 3, nmatch = 3, main = "Human vs Mouse Cox1 first 100 AA Dotplot\nwsize = 3, wstep = 3, nmatch = 3")
+
+#Store the sequence as a string set
+coxAlignStr = as(coxAligned, "AAStringSet")
+#Store the sequence as a FASTa file
+writeXStringSet(coxAlignStr, file="coxAligned.fasta")
