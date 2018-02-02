@@ -36,3 +36,4 @@ dotPlot(cox1[1:100], cox2[1:100], wsize = 3, wstep = 3, nmatch = 3, main = "Huma
 coxAlignStr = as(coxAligned, "AAStringSet")
 #Store the sequence as a FASTa file
 writeXStringSet(coxAlignStr, file="coxAligned.fasta")
+write.phylip(coxAligned, "coxAligned.phylip")
