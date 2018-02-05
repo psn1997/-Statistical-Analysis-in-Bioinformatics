@@ -62,5 +62,3 @@ ggplot(plotdata,aes(x,y,color=factor(class))) + geom_point(size=3) + geom_point(
 
 #Ouput the Distance Matrix of Centroids as a file
 write.csv(as.matrix(CentroidDistances, file = "centroiddistances.csv"))
-
-
